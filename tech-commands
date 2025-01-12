@@ -1,0 +1,23 @@
+# This command I use it for enable Ingress control, to be able to access the application out of local exploring.
+
+For Minikube, you can enable the NGINX Ingress controller:
+
+```
+ minikube addons enable ingress
+```
+
+
+# Verify the Ingress controller is running:
+
+kubectl get pods -n kube-system
+
+
+
+
+
+If PostgreSQL is running in a Kubernetes pod:
+Check the Environment Variables: If your PostgreSQL pod is running with environment variables for the database credentials, you can inspect them using the following:
+```
+kubectl exec -it <postgres-pod-name> -n <namespace> -- env
+
+```
